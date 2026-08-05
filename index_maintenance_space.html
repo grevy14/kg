@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Website Maintenance</title>
+<meta name="description" content="Our website is currently under maintenance. We'll be back soon.">
+<meta name="theme-color" content="#08111f">
+<meta property="og:title" content="Website Maintenance">
+<meta property="og:description" content="We'll be back soon.">
+<meta property="og:type" content="website">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+body{
+height:100vh;overflow:hidden;color:#fff;
+background:radial-gradient(circle at top,#12345c,#050913 65%,#010204);
+display:flex;align-items:center;justify-content:center;
+}
+.stars,.stars:after{
+content:"";position:absolute;inset:0;
+background-image:
+radial-gradient(#fff 1px,transparent 1px),
+radial-gradient(#7ec8ff 1px,transparent 1px);
+background-size:90px 90px,140px 140px;
+background-position:0 0,40px 60px;
+opacity:.55;
+animation:drift 80s linear infinite;
+}
+.stars:after{animation-duration:120s;opacity:.25}
+@keyframes drift{from{transform:translateY(0)}to{transform:translateY(200px)}}
+.planet{
+position:absolute;border-radius:50%;
+box-shadow:0 0 50px rgba(86,168,255,.4);
+}
+.p1{width:240px;height:240px;left:-60px;top:-40px;background:radial-gradient(circle,#3d8cff,#162d57)}
+.p2{width:120px;height:120px;right:8%;top:14%;background:radial-gradient(circle,#d0d0d0,#555)}
+.card{
+position:relative;z-index:2;
+width:min(900px,92%);
+background:rgba(8,15,30,.7);
+backdrop-filter:blur(10px);
+border:1px solid rgba(124,214,255,.25);
+border-radius:24px;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+padding:40px;
+gap:30px;
+box-shadow:0 0 40px rgba(0,180,255,.18);
+}
+h1{font-size:56px;line-height:1.0;margin-bottom:15px}
+h1 span{color:#69c7ff}
+p{font-size:18px;line-height:1.7;color:#d8e5f4}
+.badge{
+display:inline-block;padding:8px 14px;border-radius:999px;
+background:#17385d;color:#8dd8ff;margin-bottom:18px;font-weight:700
+}
+.progress{margin:30px 0}
+.bar{height:12px;background:#1c2940;border-radius:20px;overflow:hidden}
+.fill{width:75%;height:100%;background:linear-gradient(90deg,#4fd1ff,#5b8cff);animation:load 3s ease-in-out infinite alternate}
+@keyframes load{from{width:68%}to{width:82%}}
+.btns{display:flex;gap:15px;flex-wrap:wrap}
+a.btn{text-decoration:none;padding:14px 22px;border-radius:10px;font-weight:700}
+.primary{background:#49b8ff;color:#08111f}
+.secondary{border:1px solid #49b8ff;color:#9ddcff}
+.rocket{
+display:flex;align-items:center;justify-content:center;
+font-size:170px;animation:float 3s ease-in-out infinite;
+filter:drop-shadow(0 0 30px rgba(90,180,255,.5))
+}
+@keyframes float{50%{transform:translateY(-18px)}}
+.footer{margin-top:30px;color:#9cb4cc;font-size:14px}
+@media(max-width:800px){
+.card{grid-template-columns:1fr;text-align:center}
+h1{font-size:42px}
+.rocket{font-size:120px}
+.btns{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="planet p1"></div>
+<div class="planet p2"></div>
+
+<div class="card">
+<div>
+<div class="badge">🚀 SYSTEM UPGRADE</div>
+<h1>WEBSITE <span>MAINTENANCE</span></h1>
+<p>We're improving our website to bring you a faster, smoother, and better experience.
+Please check back soon.</p>
+
+<div class="progress">
+<div style="display:flex;justify-content:space-between;margin-bottom:8px">
+<span>Maintenance Progress</span><strong>75%</strong>
+</div>
+<div class="bar"><div class="fill"></div></div>
+</div>
+
+<div class="btns">
+<a class="btn primary" href="#">Back Soon</a>
+<a class="btn secondary" href="#">Contact Us</a>
+</div>
+
+<div class="footer">
+© 2026 Your Website. All Rights Reserved.
+</div>
+</div>
+
+<div class="rocket">🚀</div>
+</div>
+</body>
+</html>
